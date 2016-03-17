@@ -12,10 +12,7 @@ typedef struct item
 }item;
 
 
-bool mySort(item i1, item i2)
-{
-	return i1.valueUnit > i2.valueUnit;
-}
+bool mySort(item i1, item i2){ return i1.valueUnit > i2.valueUnit; }
 
 int main()
 {
@@ -39,7 +36,7 @@ int main()
 	sort(arr, arr+n , mySort);
 
 	ans = i = 0;
-	
+
 	while(W > 0)
 	{
 		if(arr[i].weight == 0) i++;
