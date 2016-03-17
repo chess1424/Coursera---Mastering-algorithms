@@ -8,10 +8,7 @@ typedef struct segment{
 	long long a, b;
 }segment;
 
-bool mySort(segment s1, segment s2)
-{
-	return s1.a < s2.a;
-}
+bool mySort(segment s1, segment s2){ return s1.a < s2.a; }
 
 int main()
 {
