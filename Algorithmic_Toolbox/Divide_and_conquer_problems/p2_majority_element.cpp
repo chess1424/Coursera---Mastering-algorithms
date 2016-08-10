@@ -7,13 +7,15 @@ int main()
   int n, ans = 0;
   long long num;
   map<long long, int> m;
+  
   scanf("%d",&n);
+
   for(int i = 0; i < n; i++)
-    {
-      scanf("%lld",&num);
-      m[num]++;
-      if(m[num] > n/2) ans = 1;
-    }
+  {
+    scanf("%lld",&num);
+    m[num]++;
+    if(m[num] > n/2) ans = 1;
+  }
 
   printf("%d\n",ans);
 
