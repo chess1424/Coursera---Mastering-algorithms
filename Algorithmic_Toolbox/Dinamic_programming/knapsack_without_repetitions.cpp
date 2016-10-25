@@ -27,7 +27,7 @@ int knapsack_without_repetitions(int n, int W)
     {
       value[i][w] = value[i-1][w];
       if(weight[i-1] <= w)
-  	  {
+      {
         int val = value[i-1][w - weight[i-1]] + money[i-1];
         if(value[i][w] < val)
           value[i][w] = val;
