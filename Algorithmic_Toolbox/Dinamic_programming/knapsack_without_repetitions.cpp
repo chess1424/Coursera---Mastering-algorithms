@@ -1,14 +1,14 @@
-  /*
+/*
   initialize all value(0,j) <-0 //items
   initialize all value(w,0) <-0 //total weights
 
   for i from 1 to n:
-	  for w from 1 to w:
-	    value(w,i) <- value(w, i-1)
+    for w from 1 to w:
+      value(w,i) <- value(w, i-1)
 	    if(wi <= w)
-	      val <- value(w - wi, i - 1) + vi
+        val <- value(w - wi, i - 1) + vi
 	      if value(w, i) < val
-	        value(w , i) <- val      `
+          value(w , i) <- val      `
   return value(W,n)
 */
 
