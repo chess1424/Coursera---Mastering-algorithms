@@ -10,7 +10,6 @@
 	      if value(w, i) < val
 	        value(w , i) <- val      `
   return value(W,n)
-
 */
 
 #include <iostream>
@@ -27,12 +26,12 @@ int knapsack_without_repetitions(int n, int W)
     for(int w = 1; w <= W; w++)
     {
       value[i][w] = value[i-1][w];
-  		if(weight[i-1] <= w)
+      if(weight[i-1] <= w)
   	  {
         int val = value[i-1][w - weight[i-1]] + money[i-1];
-  		  if(value[i][w] < val)
-  			  value[i][w] = val;
-  	  }
+        if(value[i][w] < val)
+          value[i][w] = val;
+      }
     }
   }
 
