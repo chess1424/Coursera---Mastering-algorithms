@@ -19,8 +19,8 @@ int main()
   {
     for(long long j = 1; j <= W; j++)
     {
-      max_value = dp[0][j]; //do not take the gold_bar i
-      if(gold_bars[i] <= j) //is possible to take the gold_bar i
+      max_value = dp[0][j]; //Is not possible to take the gold_bar i
+      if(gold_bars[i] <= j) //Is possible to take the gold_bar i
         max_value = max(max_value, dp[0][j - gold_bars[i]] + gold_bars[i]);
       dp[1][j] = max_value;
     }
