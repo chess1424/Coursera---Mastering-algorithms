@@ -17,6 +17,33 @@ void dfs(node *tree)
   dfs(tree -> right);
 }
 
+void pre_order_traversal(node* tree)
+{
+  if(!tree) return;
+
+  cout << tree -> value << " ";
+  pre_order_traversal(tree -> left);
+  pre_order_traversal(tree -> right);
+}
+
+void in_order_traveral(node* tree)
+{
+  if(!tree) return;
+
+  in_order_traveral(tree ->left);
+  cout << tree -> value << " ";
+  in_order_traveral(tree -> right);
+}
+
+void post_order_traveral(node* tree)
+{
+  if(!tree) return;
+
+  post_order_traveral(tree -> left);
+  post_order_traveral(tree -> right);
+  cout << tree -> value << " ";
+}
+
 int main()
 {
   node* tree = NULL;
@@ -50,6 +77,12 @@ int main()
   */
 
  dfs(tree);// print 1 2 4 8 5 3 6 7
+ cout << endl;
+ pre_order_traversal(tree);//print 1 2 4 8 5 3 6 7
+ cout << endl;
+ in_order_traveral(tree);// print 8 4 2 5 1 6 3 7
+ cout << endl;
+ post_order_traveral(tree);//print 8 4 5 2 6 7 3 1
 
   return 0;
 }
